@@ -22,18 +22,16 @@
         <java.version>21</java.version>
     </properties>
 
-    <repositories>
+    <distributionManagement>
         <repository>
-            <id>local-maven-releases</id>
+            <id>maven-releases</id>
             <url>http://localhost:8081/repository/maven-releases/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
         </repository>
-    </repositories>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <dependencies>
         <!-- Spring Boot Redis Starter -->

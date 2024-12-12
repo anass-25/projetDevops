@@ -22,6 +22,19 @@
         <java.version>21</java.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>local-maven-releases</id>
+            <url>http://localhost:8081/repository/maven-releases/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- Spring Boot Redis Starter -->
         <dependency>
@@ -97,6 +110,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <!-- SonarQube Maven Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
+            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <sonar.host.url>http://localhost:9000</sonar.host.url>
+                <sonar.login>your-sonarqube-token</sonar.login>
+            </properties>
+        </profile>
+    </profiles>
 </project>

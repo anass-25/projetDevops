@@ -25,11 +25,11 @@
     <distributionManagement>
         <repository>
             <id>maven-releases</id>
-            <url>http://localhost:8082/repository/maven-releases/</url>
+            <url>http://localhost:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://localhost:8082/repository/maven-snapshots/</url>
+            <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -126,7 +126,7 @@
             </activation>
             <properties>
                 <sonar.host.url>http://localhost:9000</sonar.host.url>
-                <sonar.login>squ_bef030502a7478a712a17580613508e3608f432d</sonar.login>
+                <sonar.login>ssqu_bf323577fee9804c2a0c7cfff1c0dab555ef92d1</sonar.login>
             </properties>
         </profile>
     </profiles>

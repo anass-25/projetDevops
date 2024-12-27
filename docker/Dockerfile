@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jdk-alpine
 WORKDIR /app
 
 # Étape 3 : Copier le fichier JAR de l'application dans le conteneur
-COPY target/spring-data-redis-example-0.0.A-SNAPSHOT.jar app.jar
+COPY target/spring-data-redis-example-0.0.1-SNAPSHOT.jar app.jar
 
 # Étape 4 : Exposer le port utilisé par l'application (par défaut 8080)
 EXPOSE 9220

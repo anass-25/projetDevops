@@ -25,7 +25,7 @@ spec:
       volumes:
       - name: app-volume
         hostPath:
-          path: /path/to/app
+          path: /home/anassbeno/Bureau/projetDevops-main
           type: Directory
 
 ---
